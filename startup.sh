@@ -28,13 +28,13 @@ litecoin-cli -regtest sendtoaddress "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb" 14 "" "
 litecoin-cli -regtest sendtoaddress "mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5" 17 "" "" true
 litecoin-cli -regtest sendtoaddress "mnk2URqujBqMEfhALMby1WZHoBRauW37Kg" 20 "" "" true
 
-blitecoin-cli -regtest $AUTH generate 1
+litecoin-cli -regtest $AUTH generate 1
 
 litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 1 "" "" true
 litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 2 "" "" true
 litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 3 "" "" true
 
-blitecoin-cli -regtest $AUTH generate 1
+litecoin-cli -regtest $AUTH generate 1
 
 litecoin-cli -regtest $AUTH getbalance
 
