@@ -25,7 +25,7 @@ RUN cp ./node_modules/litecore-node/bin/litecoin-0.13.2/bin/litecoin-cli /usr/lo
 RUN cp ./node_modules/litecore-node/bin/litecoin-0.13.2/bin/litecoind /usr/local/bin/
 
 RUN mkdir /root/.litecoin
-ADD litecoin.conf /data/bitcoin/
+ADD litecoin.conf /data/bitcoin/bitcoin.conf
 ADD wallet.backup /data/bitcoin/
 ADD startup.sh /data/bitcore/
 ADD litecoin.conf /root/.litecoin/

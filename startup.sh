@@ -1,6 +1,6 @@
 #!/bin/bash
 
-litecoind -regtest -daemon --datadir=/data/bitcoin --config=/data/bitcoin/bitcoin.conf
+litecoind -regtest -daemon --datadir=/data/bitcoin --conf=/data/bitcoin/bitcoin.conf
 
 sleep 2
 
