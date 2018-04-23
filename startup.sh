@@ -22,21 +22,25 @@ litecoin-cli -regtest importprivkey "cQrY4VypAuemJtHmNNJLyx1SNjY7mpfkdQEJpccpLSv
 
 litecoin-cli -regtest $AUTH generate 1
 
-litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 100
-litecoin-cli -regtest sendfrom "" "mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW" 12
-litecoin-cli -regtest sendfrom "" "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb" 14
-litecoin-cli -regtest sendfrom "" "mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5" 17
-litecoin-cli -regtest sendfrom "" "mnk2URqujBqMEfhALMby1WZHoBRauW37Kg" 20
+litecoin-cli -regtest setaccount "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" "Account1"
+litecoin-cli -regtest setaccount "mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW" "Account2"
+litecoin-cli -regtest setaccount "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb" "Account3"
+litecoin-cli -regtest setaccount "mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5" "Account4"
+litecoin-cli -regtest setaccount "mnk2URqujBqMEfhALMby1WZHoBRauW37Kg" "Account5"
+
+litecoin-cli -regtest sendmany "" '{"mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo":123.12345,"mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW":25.4112}'
+litecoin-cli -regtest sendmany "" '{"mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb":62.4322,"mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5":31.2345}'
+litecoin-cli -regtest sendmany "" '{"mnk2URqujBqMEfhALMby1WZHoBRauW37Kg":14.1337}'
+
+litecoin-cli -regtest $AUTH generate 3
+
+litecoin-cli -regtest sendmany "Account2" '{"mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo":1.1337,"mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5":4.123, "mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW":6.324}'
+litecoin-cli -regtest sendmany "Account3" '{"mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5":2.1337,"mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW":6.123, "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb": 7.34}'
+litecoin-cli -regtest sendmany "Account4" '{"mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo":7.1337,"mnk2URqujBqMEfhALMby1WZHoBRauW37Kg":1.123}'
 
 litecoin-cli -regtest $AUTH generate 1
 
-litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 1
-litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 2
-litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 3
-
-litecoin-cli -regtest $AUTH generate 1
-
-litecoin-cli -regtest $AUTH getbalance
+litecoin-cli -regtest $AUTH listaccounts
 
 litecoin-cli -regtest $AUTH stop
 
