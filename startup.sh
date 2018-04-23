@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf /data/bitcoin/regtest
+
 litecoind -regtest -daemon --datadir=/data/bitcoin --conf=/data/bitcoin/bitcoin.conf
 
 sleep 2
