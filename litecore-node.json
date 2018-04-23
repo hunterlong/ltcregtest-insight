@@ -1,0 +1,27 @@
+{
+  "network": "regtest",
+  "port": 3005,
+  "services": [
+    "bitcoind",
+    "insight-lite-api",
+    "insight-lite-ui",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+      "datadir": "/data/bitcoin",
+      "exec": "/usr/local/bin/litecoind"
+    }
+    },
+    "insight-lite-ui": {
+      "routePrefix": "",
+      "apiPrefix": "api"
+    },
+    "insight-lite-api": {
+      "routePrefix": "api",
+      "enableCache": true,
+      "disableRateLimiter": true
+    }
+  }
+}
