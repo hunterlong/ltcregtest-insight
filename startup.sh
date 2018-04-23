@@ -12,7 +12,7 @@ AUTH="-rpcuser=bitcoin -rpcpassword=password123"
 
 litecoin-cli -regtest $AUTH getblockchaininfo
 
-litecoin-cli -regtest $AUTH generate 100
+litecoin-cli -regtest $AUTH generate 110
 
 litecoin-cli -regtest importprivkey "cVVGgzVgcc5S3owCskoneK8R1BNGkBveiEcGDaxu8RRDvFcaQaSG" "Account" false
 litecoin-cli -regtest importprivkey "cRGkipHiYFRSAgdY9NjUT7egHTuNXoKYWQea3kWVbkSJAs4VDi8r" "Account" false
@@ -22,9 +22,11 @@ litecoin-cli -regtest importprivkey "cQrY4VypAuemJtHmNNJLyx1SNjY7mpfkdQEJpccpLSv
 
 litecoin-cli -regtest $AUTH generate 1
 
-litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 12 "" "" true
-litecoin-cli -regtest sendtoaddress "mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW" 8.2123 "" "" true
-litecoin-cli -regtest sendtoaddress "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb" 23.5434 "" "" true
+litecoin-cli -regtest sendtoaddress "mnJQyeDFmGjNoxyxKQC6MMFdpx77rYV3Bo" 10 "" "" true
+litecoin-cli -regtest sendtoaddress "mzdF3oEx8mKrpGb5rVnTE7MhQfL8N8oSnW" 12 "" "" true
+litecoin-cli -regtest sendtoaddress "mtdVMhiWWmegkkBhzYDrz84yfgofPNLNmb" 14 "" "" true
+litecoin-cli -regtest sendtoaddress "mqNnZTyFxhB6EzF1iDEAp9enrT84fwd1X5" 17 "" "" true
+litecoin-cli -regtest sendtoaddress "mnk2URqujBqMEfhALMby1WZHoBRauW37Kg" 20 "" "" true
 
 litecoin-cli -regtest $AUTH generate 1
 
