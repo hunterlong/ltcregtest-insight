@@ -13,7 +13,7 @@ services:
 
 before_install:
   - docker build -t hunterlong/ltcregtest-insight:latest .
-  - docker run -it -d -p 3001:3001 hunterlong/ltcregtest-insight:latest
+  - docker run -it -d -p 3005:3005 hunterlong/ltcregtest-insight:latest
 
 script:
   - git clone https://github.com/hunterlong/insight-api-tester.git
