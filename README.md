@@ -42,7 +42,7 @@ before_install:
 
 script:
   - sleep 30        # give some time for LTC server to start.
-  - npm test        # your test command for app, API endpoint will be at http://localhost:3001/api
+  - npm test        # your test command for app, API endpoint will be at http://localhost:3005/api
 ```
 
 
