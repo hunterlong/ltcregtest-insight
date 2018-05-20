@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - "8.11.1"
+
+sudo: required
+
+notifications:
+  email: false
+
+services:
+  - docker
+
+before_install:
+  - docker build -t hunterlong/ltcregtest-insight:latest .
+  - docker run -it -d -p 3001:3001 hunterlong/ltcregtest-insight:latest
+
+script:
+  - git clone https://github.com/hunterlong/insight-api-tester.git
+  - cd insight-api-tester && npm install
+  - sleep 30
+  - npm test
